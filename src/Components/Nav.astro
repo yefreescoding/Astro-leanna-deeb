@@ -1,0 +1,72 @@
+---
+import links from "../Data/navData";
+import socials from "../Data/socialMediaData";
+---
+
+<nav class="nav">
+    <a class="nav__home" href="/">LD</a>
+    <!--Links de navegación para toda la página.-->
+    <ul class="nav__ul">
+        {
+            links.map((item) => (
+                <a class="nav__links" href={item.link}>
+                    {item.name}
+                </a>
+            ))
+        }
+    </ul>
+    <div class="infoButton">
+        <!--Section de redes sociales-->
+        <div class="socials">
+            {
+                socials.map((item) => (
+                    <a href={item.href} target="_blank">
+                        <img src={item.src} alt={item.alt} class={item.class} />
+                    </a>
+                ))
+            }
+        </div>
+        <!--Menu despegable. Para Smartphones.-->
+        <div class="buttons-header">
+            <button class="logIn">Log In</button>
+            <button class="signUp">Sign Up</button>
+        </div>
+    </div>
+</nav>
+
+<style>
+    header nav div.logoDiv {
+        text-align: start;
+        padding-left: 1em;
+    }
+
+    header nav div.logoDiv div.logo-letters {
+        font-size: 4em;
+        font-weight: 900;
+        font-family: "Dosis", sans-serif;
+        font-style: italic;
+        cursor: pointer;
+    }
+
+    header nav.navBar {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+    }
+
+    header nav.navBar ul {
+        list-style-type: none;
+        display: none;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav.navBar ul li {
+        font-size: 1.3em;
+        margin: 0.5em 1em;
+        cursor: pointer;
+    }
+</style>

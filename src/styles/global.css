@@ -1,0 +1,451 @@
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0.5px solid rgb(20, 2, 2);
+ 
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: min(100% - 0.5rem, 90em);
+    margin-inline: auto;
+    background-color: hsl(0, 0%, 20%);
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+a, span {
+    text-decoration: none;
+    color: hsl(0, 0%, 20%);
+}
+
+img, video, svg {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+div.infoButton {
+  margin-top: 1em;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+div.infoButton div.socials {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+}
+div.infoButton div.socials img.socials__ig, div.infoButton div.socials img.socials__linke {
+  width: 2.7em;
+}
+
+div.infoButton div.socials img {
+  width: 3em;
+  margin: 0 1em;
+  filter: invert(100%);
+  cursor: pointer;
+  transition: all 0.24s linear;
+}
+
+div.infoButton div.socials img:hover {
+  transform: translate(0, -3px);
+}
+
+div.infoButton div.buttons-header {
+  margin: 1.5em 0;
+  width: 100%;
+  display: none;
+  flex-flow: row;
+  justify-content: center;
+}
+
+div.infoButton div.buttons-header button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1.1em;
+  padding: 1em 1.5em;
+  border: white 1px solid;
+  border-radius: 8px;
+  margin: 1em;
+  cursor: pointer;
+  transition: all 0.24s linear;
+}
+
+div.infoButton div.buttons-header button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+main.contenedor-padre-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  align-items: center;
+}
+
+article.contenedor-portada {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+#videoCover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+  border: none;
+  filter: brightness(50%);
+}
+
+div.container-InfoDiv {
+  display: flex;
+  flex-flow: column;
+  row-gap: 10px;
+  padding: 60px;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+}
+
+div.container-InfoDiv h1.titleCover {
+  color: rgb(243, 240, 240);
+  font-size: 4.7em;
+}
+
+div.container-InfoDiv p.descriptionInfo {
+  font-size: 2em;
+  color: rgba(255, 248, 248, 0.9);
+}
+
+div.container-InfoDiv div.buttonsCover {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div.container-InfoDiv div.buttonsCover button.buttonCover {
+  border: solid white 1px;
+  color: white;
+  font-size: 17px;
+  padding: 17px 18px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.24s linear;
+}
+
+.planLinks {
+  color: white;
+  text-decoration: none;
+}
+
+div.container-InfoDiv div.buttonsCover button.buttonCover:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.container-InfoDiv div.buttonsCover button.buttonCover:active {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: 419px) {
+  article.contenedor-portada {
+    justify-content: center;
+  }
+  #videoCover {
+    width: 100%;
+  }
+}
+.intro {
+  background-color: white;
+  width: 100%;
+  height: 90vh;
+  color: #111;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3%;
+}
+.intro .intro__title {
+  font-size: 5em;
+  font-family: "Righteous", cursive;
+  font-weight: bold;
+  color: rgba(38, 38, 38, 0.7254901961);
+  text-align: center;
+  margin-bottom: 1em;
+}
+.intro__parag {
+  font-size: 2em;
+  text-align: center;
+  color: #3a3a3a;
+  font-weight: 100;
+}
+.intro__parag .red-text {
+  color: red;
+}
+
+@media (min-width: 1024px) {
+  .intro {
+    align-items: flex-start;
+    padding: 5%;
+    height: 88vh;
+  }
+  .intro__parag {
+    text-align: start;
+    font-weight: 400;
+  }
+}
+.workouts {
+  background-image: linear-gradient(#292929, #111);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3em;
+  place-items: center;
+  width: 100%;
+}
+.workouts__containers {
+  position: relative;
+  background-color: black;
+  background-image: url(../../images/paginas/full-body-hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33em;
+  height: 48em;
+  top: -10em;
+  transition: all 0.24s linear;
+}
+.workouts__containers .workouts__level {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.2em 0.5em;
+  border-radius: 8px;
+  font-size: 1.8em;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.8);
+}
+.workouts__containers .workouts__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 2.5em;
+  padding-bottom: 4em;
+  color: white;
+  background-image: linear-gradient(rgba(199, 199, 199, 0), rgb(13, 13, 13));
+}
+.workouts__containers .workouts__info h3 {
+  font-size: 4em;
+  margin-bottom: 1em;
+}
+.workouts__containers .workouts__info p {
+  font-size: 1.7em;
+  line-height: 25px;
+}
+.workouts__containers.lower-body {
+  background-image: url(../../images/paginas/LowerBody.png);
+}
+.workouts__containers.stretching {
+  background-image: url(../../images/paginas/StretchExe.png);
+}
+.workouts__containers:hover {
+  transform: scale(1.05, 1.05);
+}
+
+@media (min-width: 640px) {
+  .workouts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .workouts__containers {
+    width: 25em;
+    height: 45em;
+    top: 0;
+  }
+  .workouts__containers .workouts__info p {
+    font-size: 1.5em;
+  }
+  .workouts__containers.lower-body {
+    top: 0;
+  }
+  .workouts__containers.stretching {
+    display: none;
+  }
+}
+@media (min-width: 1007px) {
+  .workouts {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
+  .workouts__containers {
+    width: 29em;
+    height: 55em;
+    top: -10em;
+  }
+  .workouts__containers.lower-body {
+    top: -2.4em;
+  }
+  .workouts__containers.stretching {
+    display: block;
+  }
+}
+@media (min-width: 1440px) {
+  .workouts__containers {
+    width: 35em;
+    height: 55em;
+  }
+}
+footer.greetings-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 100px;
+  width: 100%;
+  height: 100vh;
+}
+footer.greetings-links div.email-links-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #111;
+  color: white;
+}
+footer.greetings-links div.email-links-container div.email-form {
+  background-color: rgb(225, 47, 74);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 5em;
+  align-items: center;
+  padding-left: 3em;
+}
+footer.greetings-links div.email-links-container div.email-form div.email-form__text {
+  margin-bottom: 3em;
+}
+footer.greetings-links div.email-links-container div.email-form div.email-form__text span {
+  font-size: 2em;
+}
+footer.greetings-links div.email-links-container div.email-form div.email-form__text h2 {
+  margin-top: -10px;
+  font-size: 2.5em;
+}
+footer.greetings-links div.email-links-container div.email-form div.email-form__text h2 span {
+  font-family: "Dancing Script", cursive;
+}
+footer.greetings-links div.email-links-container div.email-form div.email-form__text span.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 48;
+  position: relative;
+  top: 5px;
+}
+footer.greetings-links div.email-links-container div.email-form form {
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+  padding-bottom: 10em;
+}
+footer.greetings-links div.email-links-container div.email-form form input.email, footer.greetings-links div.email-links-container div.email-form form input.button {
+  padding: 0.5em;
+  font-size: 1.3em;
+  border-radius: 30px;
+  border: none;
+}
+footer.greetings-links div.email-links-container div.email-form form input.button {
+  color: #111;
+  width: 10em;
+  background-color: white;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+footer.greetings-links div.email-links-container div.links-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  place-items: center;
+  padding: 4em 0;
+  gap: 4em;
+}
+footer.greetings-links div.email-links-container div.links-contacts__container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 2em;
+  font-size: 1.4em;
+}
+footer.greetings-links div.email-links-container div.links-contacts__container span {
+  font-weight: bold;
+}
+footer.greetings-links div.email-links-container div.links-contacts__container ul {
+  list-style-type: none;
+  font-weight: 100;
+}
+footer.greetings-links div.email-links-container div.links-contacts__container a {
+  color: white;
+}
+footer.greetings-links div.copyright {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: #111;
+  color: white;
+}
+footer.greetings-links div.copyright a {
+  color: white;
+}
+
+@media (min-width: 648px) {
+  footer.greetings-links div.email-links-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  footer.greetings-links div.email-links-container div.email-form {
+    grid-template-rows: 1fr 1fr;
+  }
+  footer.greetings-links div.email-links-container div.email-form div.email-form__text {
+    margin: 0;
+  }
+  footer.greetings-links div.email-links-container div.email-form form {
+    align-self: flex-start;
+  }
+  footer.greetings-links div.email-links-container div.email-form form input.email {
+    width: 60%;
+  }
+  footer.greetings-links div.copyright {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+  }
+}
+/*
+
+  PRINCIPALS styles for the description article.
+
+  background-color: white
+  Text color : greyish black
+  important text span : red
+
+*//*# sourceMappingURL=styles.css.map */

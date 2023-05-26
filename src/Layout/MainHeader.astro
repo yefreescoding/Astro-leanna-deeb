@@ -1,0 +1,40 @@
+---
+import Nav from "../Components/Nav.astro";
+---
+
+<header class="header top-nav">
+    <div class="header__message">
+        <a class="header__link header__link--oficial" href="#" target="_blank"
+            >Here you can find the real website</a
+        >
+    </div>
+    <Nav />
+</header>
+<!--Barra de navegación para toda la pagina. **LEFT** -->
+
+<style>
+    .header {
+        position: fixed;
+        inset: 0 0 auto 0;
+        z-index: 99;
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        background-color: hsl(0, 0%, 80%, 0.8);
+        -webkit-backdrop-filter: blur(1rem);
+        backdrop-filter: blur(1rem);
+        color: white;
+    }
+    .header__message {
+        text-align: center;
+        background-color: hsl(318, 20%, 20%);
+    }
+
+    .header__link {
+        font-size: 1.1rem;
+    }
+
+    .header__link--oficial {
+        color: hsl(0, 0%, 90%);
+    }
+</style>
