@@ -4,20 +4,26 @@ import socials from "../Data/socialMediaData";
 ---
 
 <nav class="nav">
-    <a class="nav__home" href="/">LD</a>
-    <!--Links de navegación para toda la página.-->
-    <ul class="nav__ul">
-        {
-            links.map((item) => (
-                <a class="nav__links" href={item.link}>
-                    {item.name}
-                </a>
-            ))
-        }
-    </ul>
-    <div class="infoButton">
+    <!-- ============================= -->
+    <div class="nav__division nav__division--left">
+        <a class="nav__home" href="/">LD</a>
+        <ul class="nav__ul">
+            {
+                links.map((item) => (
+                    <li>
+                        <a class="nav__link" href={item.link}>
+                            {item.name}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+    <!-- ============================= -->
+    <!-- ============================= -->
+    <div class="nav__division nav__division--right">
         <!--Section de redes sociales-->
-        <div class="socials">
+        <div class="nav__socials">
             {
                 socials.map((item) => (
                     <a href={item.href} target="_blank">
@@ -27,46 +33,80 @@ import socials from "../Data/socialMediaData";
             }
         </div>
         <!--Menu despegable. Para Smartphones.-->
-        <div class="buttons-header">
-            <button class="logIn">Log In</button>
-            <button class="signUp">Sign Up</button>
+        <div class="nav__btns">
+            <button class="nav__btn nav__btn--log">Log In</button>
+            <button class="nav__btn nav__btn--sign">Sign Up</button>
         </div>
     </div>
+    <!-- ============================= -->
+    <!-- ============================= -->
 </nav>
 
 <style>
-    header nav div.logoDiv {
-        text-align: start;
-        padding-left: 1em;
+    .nav,
+    .nav__division,
+    .nav__socials,
+    .nav__btns,
+    .nav__ul {
+        display: flex;
+        align-items: center;
     }
 
-    header nav div.logoDiv div.logo-letters {
-        font-size: 4em;
+    .nav__division--left,
+    .nav__division--right,
+    .nav__ul,
+    .nav__socials,
+    .nav__btns {
+        gap: 1rem;
+    }
+
+    .nav__division,
+    .nav__ul {
+        flex: 1;
+    }
+    .nav {
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+    }
+    .nav__division--right {
+        justify-content: flex-end;
+    }
+    .nav__division--left {
+        justify-content: flex-start;
+    }
+
+    .nav__home {
+        font-size: 2.5em;
         font-weight: 900;
         font-family: "Dosis", sans-serif;
         font-style: italic;
         cursor: pointer;
     }
-
-    header nav.navBar {
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        flex-flow: column;
-        width: 100%;
+    .nav__link {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: hsl(0, 0%, 25%);
+    }
+    .nav__icons {
+        width: 1.5rem;
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
     }
 
-    header nav.navBar ul {
-        list-style-type: none;
-        display: none;
-        flex-flow: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    header nav.navBar ul li {
-        font-size: 1.3em;
-        margin: 0.5em 1em;
+    .nav__btn {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: hsl(0, 0%, 30%);
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border: hsl(0, 0%, 30%) 1px solid;
+        border-radius: 4px;
         cursor: pointer;
+        transition: all 0.24s linear;
+    }
+
+    .nav__btn:hover {
+        background-color: rgba(255, 255, 255, 0.5);
     }
 </style>
