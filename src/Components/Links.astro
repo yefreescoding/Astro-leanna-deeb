@@ -1,0 +1,68 @@
+---
+interface Props {
+  text: string;
+  href: string;
+  style: 'link--1' | 'link--2';
+  classes?: string;
+}
+
+const { text, href, style, classes, ...rest } = Astro.props as Props;
+---
+
+<a href={href} class:list={['link', classes, style]} {...rest}>{text}</a>
+
+<style>
+  /* CSS */
+  .link--2 {
+    background-image: radial-gradient(
+      100% 100% at 100% 0,
+      hsl(233, 40%, 30%) 0,
+      hsl(233, 70%, 15%) 100%
+    );
+  }
+
+  .link--1 {
+    background-image: radial-gradient(
+      100% 100% at 100% 0,
+      hsl(284, 100%, 68%) 0,
+      hsl(291, 100%, 66%) 100%
+    );
+  }
+  .link--1,
+  .link--2 {
+    align-items: center;
+    border: 0.5px transparent solid;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+      rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+    position: relative;
+    text-decoration: none;
+    transition: box-shadow 0.15s, transform 0.15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    /* font-size: 18px; */
+  }
+
+  :is(.link--2, .link--1):focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+
+  :is(.link--2, .link--1):hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #1f213081 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+
+  :is(.link--2, .link--1):active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+</style>

@@ -1,26 +1,31 @@
 ---
 // import Global Styles Folder
-import "../styles/global.css";
+import '../styles/global.css';
 
 // import Layout
-import MainHeader from "./MainHeader.astro";
+import MainHeader from './MainHeader.astro';
 
-import MainFooter from "./MainFooter.astro";
+import MainFooter from './MainFooter.astro';
 
 // import components
-import Head from "../Components/Head.astro";
+import Head from '../Components/Head.astro';
+import Main from '../Components/Main.astro';
 
-const { title } = Astro.props;
+// important information for the Main component
+const { title, MainTitle, PageDescription } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-    <>
-        <Head {title} />
-        <MainHeader />
-        <body>
-            <slot />
-            <MainFooter />
-        </body>
-    </>
+  <>
+    <Head {title} />
+    <MainHeader />
+    <Main {MainTitle} {PageDescription} />
+    <body>
+      <div class="wrapper">
+        <slot />
+        <MainFooter />
+      </div>
+    </body>
+  </>
 </html>

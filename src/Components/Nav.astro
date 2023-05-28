@@ -1,114 +1,115 @@
 ---
-import links from "../Data/navData";
-import socials from "../Data/socialMediaData";
+import links from '../Data/navData';
+import Links from './Links.astro';
+import socials from '../Data/socialMediaData';
 ---
 
 <nav class="nav">
-    <!-- ============================= -->
-    <div class="nav__division nav__division--left">
-        <a class="nav__home" href="/">LD</a>
-        <ul class="nav__ul">
-            {
-                links.map((item) => (
-                    <li>
-                        <a class="nav__link" href={item.link}>
-                            {item.name}
-                        </a>
-                    </li>
-                ))
-            }
-        </ul>
+  <!-- ============================= -->
+  <div class="nav__division nav__division--left">
+    <a class="nav__home" href="/">LD</a>
+    <ul class="nav__ul">
+      {
+        links.map((item) => (
+          <li>
+            <a class="nav__link" href={item.link}>
+              {item.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <!-- ============================= -->
+  <!-- ============================= -->
+  <div class="nav__division nav__division--right">
+    <!--Section de redes sociales-->
+    <div class="nav__socials">
+      {
+        socials.map((item) => (
+          <a href={item.href} target="_blank">
+            <img src={item.src} alt={item.alt} class={item.class} />
+          </a>
+        ))
+      }
     </div>
-    <!-- ============================= -->
-    <!-- ============================= -->
-    <div class="nav__division nav__division--right">
-        <!--Section de redes sociales-->
-        <div class="nav__socials">
-            {
-                socials.map((item) => (
-                    <a href={item.href} target="_blank">
-                        <img src={item.src} alt={item.alt} class={item.class} />
-                    </a>
-                ))
-            }
-        </div>
-        <!--Menu despegable. Para Smartphones.-->
-        <div class="nav__btns">
-            <a href="https://app.liftwithleana.com/register" class="nav__btn nav__btn--log">Register</a>
-        </div>
+    <!--Menu despegable. Para Smartphones.-->
+    <div class="nav__btns">
+      <Links text="Register" href="/sections/index.astro" style="link--1" />
     </div>
-    <!-- ============================= -->
-    <!-- ============================= -->
+  </div>
+  <!-- ============================= -->
+  <!-- ============================= -->
 </nav>
 
 <style>
-    .nav,
-    .nav__division,
-    .nav__socials,
-    .nav__btns,
-    .nav__ul {
-        display: flex;
-        align-items: center;
-    }
+  .nav,
+  .nav__division,
+  .nav__socials,
+  .nav__btns,
+  .nav__ul {
+    display: flex;
+    align-items: center;
+  }
 
-    .nav__division--left,
-    .nav__division--right,
-    .nav__ul,
-    .nav__socials,
-    .nav__btns {
-        gap: 1rem;
-    }
+  .nav__division--left,
+  .nav__division--right,
+  .nav__ul,
+  .nav__socials,
+  .nav__btns {
+    gap: 1rem;
+  }
 
-    .nav__division,
-    .nav__ul {
-        flex: 1;
-    }
-    .nav {
-        justify-content: space-between;
-        padding: 0.5rem 1rem;
-    }
-    .nav__division--right {
-        justify-content: flex-end;
-    }
-    .nav__division--left {
-        justify-content: flex-start;
-    }
+  .nav__division,
+  .nav__ul {
+    flex: 1;
+  }
+  .nav {
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  .nav__division--right {
+    justify-content: flex-end;
+  }
+  .nav__division--left {
+    justify-content: flex-start;
+  }
 
-    .nav__home {
-        font-size: 2.5em;
-        font-weight: 900;
-        font-family: "Dosis", sans-serif;
-        font-style: italic;
-        cursor: pointer;
-        color: hsl(233, 40%, 96%);
-    }
-    .nav__link {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: hsl(231, 57%, 95%);
-    }
-    .nav__icons {
-        width: 1.5rem;
-        aspect-ratio: 1;
-        object-fit: contain;
-        object-position: center;
-        filter: invert(1);
-    }
+  .nav__home {
+    font-size: 2.5em;
+    font-weight: 900;
+    font-family: 'Dosis', sans-serif;
+    font-style: italic;
+    cursor: pointer;
+    color: hsl(233, 40%, 96%);
+  }
+  .nav__link {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: hsl(231, 57%, 95%);
+  }
+  .nav__icons {
+    width: 1.5rem;
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    filter: invert(1);
+  }
 
-    .nav__btn {
-        background-color: transparent;
-        color: hsl(228, 25%, 95%);
-        font-size: 1rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        padding: 0.5rem 1rem;
-        border: hsl(228, 25%, 95%) 1px solid;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: all 0.24s linear;
-    }
+  .nav__btn {
+    background-color: transparent;
+    color: hsl(228, 25%, 95%);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    border: hsl(228, 25%, 95%) 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.24s linear;
+  }
 
-    .nav__btn:hover {
-        background-color: rgba(255, 255, 255, 0.5);
-    }
+  .nav__btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 </style>

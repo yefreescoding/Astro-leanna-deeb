@@ -1,0 +1,90 @@
+---
+import Link from './Links.astro';
+
+const { MainTitle, PageDescription } = Astro.props;
+---
+
+<main class="cover">
+  <div class="cover__text">
+    <h1 class="cover__h1">{MainTitle}</h1>
+    <p class="cover__p">{PageDescription}</p>
+    <div class="cover__links">
+      <Link
+        text="Read the last post"
+        href="/sections/index.astro"
+        style="link--1"
+      />
+      <Link
+        text="Go to the official web site"
+        href="/sections/index.astro"
+        style="link--2"
+      />
+    </div>
+  </div>
+  <img
+    class="cover__image"
+    src="/hero-img/hero-img1.png"
+    alt="Leanna deeb siting on a couch"
+  />
+</main>
+
+<style>
+  /* main.contenedor-padre-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    align-items: center;
+  } */
+
+  .cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 7rem;
+    margin: 3rem 0;
+  }
+
+  .cover__text {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .cover__h1 {
+  }
+
+  .cover__p {
+    padding-inline: 5rem;
+    color: hsl(0, 0, 60%);
+  }
+
+  .cover__links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  div.container-InfoDiv div.buttonsCover button.buttonCover {
+    border: solid white 1px;
+    color: white;
+    font-size: 17px;
+    padding: 17px 18px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.24s linear;
+  }
+
+  .cover__image {
+    object-fit: cover;
+    object-position: top;
+    width: 80%;
+    aspect-ratio: 16/9;
+    border-radius: 1rem;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+</style>

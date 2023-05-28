@@ -1,79 +1,16 @@
 ---
 // import Layouts
-import MainLayout from "../Layout/MainLayout.astro";
+import MainLayout from '../Layout/MainLayout.astro';
+
+const title = 'Hello, here you can find a little bit of me.';
+
+const description =
+  'Leanna deeb is a fitness influencer, best know for her amazing tiktok and instgram content';
 ---
 
-<MainLayout title="Train with Leanna">
-    <!--The last part of the page. Buff!-->
-    <footer class="greetings-links">
-        <!--The footer container is divided in 2 parts-->
-        <!-- 1 PART -->
-        <div class="email-links-container">
-            <!--The email form subscription-->
-            <div class="email-form">
-                <div class="email-form__text">
-                    <span>Hey there</span>
-                    <h2>
-                        Let's talk <span class="h2__sports">Sport</span>
-                    </h2>
-                    <span>Subscribe to our newsletter.</span>
-                    <span class="material-symbols-outlined">mail</span>
-                </div>
-                <form name="email-form__newsletter" action="#" method="get">
-                    <input class="email" type="email" name="email-news" />
-                    <input class="button" type="submit" value="subscribe" />
-                </form>
-            </div>
-            <!--The important information about the company or the creator of the web page-->
-            <div class="links-contacts">
-                <div class="links-contacts__container">
-                    <span class="__header">Address</span>
-                    <ul>
-                        <li>Calle de la Gitana</li>
-                        <li>Madrid</li>
-                        <li>Spain</li>
-                    </ul>
-                    <a href="">Localization Maps</a>
-                </div>
-                <!--Information blocks-->
-                <div class="links-contacts__container">
-                    <span class="__header">Address</span>
-                    <ul>
-                        <li>Calle de la Gitana</li>
-                        <li>Madrid</li>
-                        <li>Spain</li>
-                    </ul>
-                    <a href="">Localization Maps</a>
-                </div>
-                <!--Information blocks-->
-                <div class="links-contacts__container">
-                    <span class="__header">Address</span>
-                    <ul>
-                        <li>Calle de la Gitana</li>
-                        <li>Madrid</li>
-                        <li>Spain</li>
-                    </ul>
-                    <a href="">Localization Maps</a>
-                </div>
-                <!--Information blocks-->
-                <div class="links-contacts__container">
-                    <span class="__header">Address</span>
-                    <ul>
-                        <li>Calle de la Gitana</li>
-                        <li>Madrid</li>
-                        <li>Spain</li>
-                    </ul>
-                    <a href="">Localization Maps</a>
-                </div>
-            </div>
-        </div>
-        <!--The 2 PART -->
-        <div class="copyright">
-            <p>2023. Every right reserved to the creator of the web page.</p>
-            <div>
-                <a href="">links to the source code |</a>
-                <a href="">Cool video</a>
-            </div>
-        </div>
-    </footer>
-</MainLayout>
+<MainLayout
+  title="Train with Leanna"
+  title={title}
+  MainTitle={title}
+  PageDescription={description}
+/>
