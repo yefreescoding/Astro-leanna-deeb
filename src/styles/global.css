@@ -16,7 +16,7 @@ body {
   font-family: 'Poppins', sans-serif;
   width: min(100% - 0.5rem, 90em);
   margin-inline: auto;
-  background-color: hsl(0, 0%, 90%);
+  background-color: hsl(0, 0%, 98%);
   padding-top: 6.25rem;
 }
 
