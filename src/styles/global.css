@@ -1,5 +1,6 @@
-
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -12,30 +13,37 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    width: min(100% - 0.5rem, 90em);
-    margin-inline: auto;
-    background-color: hsl(0, 0%, 20%);
+  font-family: 'Poppins', sans-serif;
+  width: min(100% - 0.5rem, 90em);
+  margin-inline: auto;
+  background-color: hsl(0, 0%, 20%);
 }
 
-h1, h2, h3, h4 {
-    font-weight: 700;
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
 }
 
-a, span, button {
-    text-decoration: none;
-    color: hsl(0, 0%, 20%);
-    font-family: 'Poppins', sans-serif;
+a,
+span,
+button {
+  text-decoration: none;
+  color: hsl(0, 0%, 20%);
+  font-family: 'Poppins', sans-serif;
 }
 
-img, video, svg {
-    display: block;
-    width: 100%;
-    object-fit: contain;
+img,
+video,
+svg {
+  display: block;
+  width: 100%;
+  object-fit: contain;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 div.infoButton {
@@ -68,7 +76,7 @@ article.contenedor-portada {
   height: 100%;
   position: absolute;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: 0;
   border: none;
   filter: brightness(50%);
@@ -146,7 +154,7 @@ div.container-InfoDiv div.buttonsCover button.buttonCover:active {
 }
 .intro .intro__title {
   font-size: 5em;
-  font-family: "Righteous", cursive;
+  font-family: 'Righteous', cursive;
   font-weight: bold;
   color: rgba(38, 38, 38, 0.7254901961);
   text-align: center;
@@ -296,21 +304,41 @@ footer.greetings-links div.email-links-container div.email-form {
   align-items: center;
   padding-left: 3em;
 }
-footer.greetings-links div.email-links-container div.email-form div.email-form__text {
+footer.greetings-links
+  div.email-links-container
+  div.email-form
+  div.email-form__text {
   margin-bottom: 3em;
 }
-footer.greetings-links div.email-links-container div.email-form div.email-form__text span {
+footer.greetings-links
+  div.email-links-container
+  div.email-form
+  div.email-form__text
+  span {
   font-size: 2em;
 }
-footer.greetings-links div.email-links-container div.email-form div.email-form__text h2 {
+footer.greetings-links
+  div.email-links-container
+  div.email-form
+  div.email-form__text
+  h2 {
   margin-top: -10px;
   font-size: 2.5em;
 }
-footer.greetings-links div.email-links-container div.email-form div.email-form__text h2 span {
-  font-family: "Dancing Script", cursive;
+footer.greetings-links
+  div.email-links-container
+  div.email-form
+  div.email-form__text
+  h2
+  span {
+  font-family: 'Dancing Script', cursive;
 }
-footer.greetings-links div.email-links-container div.email-form div.email-form__text span.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 48;
+footer.greetings-links
+  div.email-links-container
+  div.email-form
+  div.email-form__text
+  span.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 48;
   position: relative;
   top: 5px;
 }
@@ -321,13 +349,26 @@ footer.greetings-links div.email-links-container div.email-form form {
   gap: 1em;
   padding-bottom: 10em;
 }
-footer.greetings-links div.email-links-container div.email-form form input.email, footer.greetings-links div.email-links-container div.email-form form input.button {
+footer.greetings-links
+  div.email-links-container
+  div.email-form
+  form
+  input.email,
+footer.greetings-links
+  div.email-links-container
+  div.email-form
+  form
+  input.button {
   padding: 0.5em;
   font-size: 1.3em;
   border-radius: 30px;
   border: none;
 }
-footer.greetings-links div.email-links-container div.email-form form input.button {
+footer.greetings-links
+  div.email-links-container
+  div.email-form
+  form
+  input.button {
   color: #111;
   width: 10em;
   background-color: white;
@@ -349,14 +390,23 @@ footer.greetings-links div.email-links-container div.links-contacts__container {
   gap: 2em;
   font-size: 1.4em;
 }
-footer.greetings-links div.email-links-container div.links-contacts__container span {
+footer.greetings-links
+  div.email-links-container
+  div.links-contacts__container
+  span {
   font-weight: bold;
 }
-footer.greetings-links div.email-links-container div.links-contacts__container ul {
+footer.greetings-links
+  div.email-links-container
+  div.links-contacts__container
+  ul {
   list-style-type: none;
   font-weight: 100;
 }
-footer.greetings-links div.email-links-container div.links-contacts__container a {
+footer.greetings-links
+  div.email-links-container
+  div.links-contacts__container
+  a {
   color: white;
 }
 footer.greetings-links div.copyright {
@@ -379,13 +429,20 @@ footer.greetings-links div.copyright a {
   footer.greetings-links div.email-links-container div.email-form {
     grid-template-rows: 1fr 1fr;
   }
-  footer.greetings-links div.email-links-container div.email-form div.email-form__text {
+  footer.greetings-links
+    div.email-links-container
+    div.email-form
+    div.email-form__text {
     margin: 0;
   }
   footer.greetings-links div.email-links-container div.email-form form {
     align-self: flex-start;
   }
-  footer.greetings-links div.email-links-container div.email-form form input.email {
+  footer.greetings-links
+    div.email-links-container
+    div.email-form
+    form
+    input.email {
     width: 60%;
   }
   footer.greetings-links div.copyright {
@@ -404,4 +461,4 @@ footer.greetings-links div.copyright a {
   Text color : greyish black
   important text span : red
 
-*//*# sourceMappingURL=styles.css.map */
+*/ /*# sourceMappingURL=styles.css.map */

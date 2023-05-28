@@ -4,8 +4,8 @@ import Nav from "../Components/Nav.astro";
 
 <header class="header top-nav">
     <div class="header__message">
-        <a class="header__link header__link--oficial" href="#" target="_blank"
-            >Here you can find the real website</a
+        <a class="header__link header__link--oficial" href="https://liftwithleana.com/" target="_blank"
+            >This is not a offical website. Click this link to go to offical Leanna Deeb website</a
         >
     </div>
     <Nav />
@@ -20,21 +20,20 @@ import Nav from "../Components/Nav.astro";
         display: flex;
         flex-flow: column;
         width: 100%;
-        background-color: hsl(0, 0%, 80%, 0.8);
-        -webkit-backdrop-filter: blur(1rem);
+        background-color: hsl(0, 0%, 100%, 0.5);
+        -webkit-backdrop-filter: blur(.5rem);
         backdrop-filter: blur(1rem);
-        color: white;
+        color: hsl(0, 0%, 100%);
     }
     .header__message {
         text-align: center;
-        background-color: hsl(318, 20%, 20%);
+        background-color: hsl(231, 69%, 10%);
+        padding: .5rem 0;
     }
-
     .header__link {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
-
     .header__link--oficial {
-        color: hsl(0, 0%, 90%);
+        color: hsl(0, 0%, 98%);
     }
 </style>

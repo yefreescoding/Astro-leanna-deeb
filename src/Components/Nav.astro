@@ -34,8 +34,7 @@ import socials from "../Data/socialMediaData";
         </div>
         <!--Menu despegable. Para Smartphones.-->
         <div class="nav__btns">
-            <button class="nav__btn nav__btn--log">Log In</button>
-            <button class="nav__btn nav__btn--sign">Sign Up</button>
+            <a href="https://app.liftwithleana.com/register" class="nav__btn nav__btn--log">Register</a>
         </div>
     </div>
     <!-- ============================= -->
@@ -81,26 +80,29 @@ import socials from "../Data/socialMediaData";
         font-family: "Dosis", sans-serif;
         font-style: italic;
         cursor: pointer;
+        color: hsl(233, 40%, 96%);
     }
     .nav__link {
         font-size: 1.1rem;
         font-weight: 600;
-        color: hsl(0, 0%, 25%);
+        color: hsl(231, 57%, 95%);
     }
     .nav__icons {
         width: 1.5rem;
         aspect-ratio: 1;
         object-fit: contain;
         object-position: center;
+        filter: invert(1);
     }
 
     .nav__btn {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: hsl(0, 0%, 30%);
+        background-color: transparent;
+        color: hsl(228, 25%, 95%);
         font-size: 1rem;
         font-weight: 600;
+        letter-spacing: 2px;
         padding: 0.5rem 1rem;
-        border: hsl(0, 0%, 30%) 1px solid;
+        border: hsl(228, 25%, 95%) 1px solid;
         border-radius: 4px;
         cursor: pointer;
         transition: all 0.24s linear;
