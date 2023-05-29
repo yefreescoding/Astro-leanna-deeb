@@ -16,11 +16,11 @@ const PageDescription =
 const image = '/hero-img/hero-exercises.png';
 //
 
-const allPosts = await Astro.glob('./*.md');
+// const allPosts = await Astro.glob('./*.md');
 ---
 
 <MainLayout title="Blog">
   <Main {MainTitle} {PageDescription} {image} />
-  {allPosts.map((post) => <PostCard {post} />)}
+  <!-- {allPosts.map((post) => <PostCard {post} />)} -->
   <Links text="Post 1" href="./post-1/" style="link--1" />
 </MainLayout>
