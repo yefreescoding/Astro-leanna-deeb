@@ -30,7 +30,7 @@ h1 {
 }
 
 p {
-  font-size: clamp(0.9rem, 1rem + 1vw, 1.3rem);
+  font-size: clamp(0.9rem, 1rem + 3vw, 1.3rem);
   line-height: 1.25;
 }
 

@@ -1,7 +1,4 @@
 ---
-// import Global Styles Folder
-import '../styles/global.css';
-
 // import Layouts
 import MainLayout from '../Layout/MainLayout.astro';
 import ServiceSection from '../Layout/ServiceSection.astro';
@@ -27,28 +24,37 @@ const image = '/hero-img/hero-img1.png';
   <section class="intro">
     <h2 class="intro__h2">What was this site made for?</h2>
     <p class="intro__p">
-      Have you ever had a burning desire to make a vision come to life? You want
-      it so bad that you move with so much self belief that one day it will
-      actually happen. No matter what, life will throw challenges your way,
-      people will tell you your dream is not possible. You can either let people
-      dictate your life or you can move with intent every single day until you
-      make that dream your reality. , is showing the world how to become the
-      best version of yourself. With her amazin personalitie has shown thousand
-      of people for all over the world, how
-      <span class="intro__p intro__p--red">pushing ourselves</span>
+      Have you ever had a burning <span class="intro__p intro__p--color">
+        desire to make a vision come to life?
+      </span>
+    </p>
+    <p>
+      You want it so bad that you move with so much self belief that one day <span
+        class="intro__p intro__p--color">it will actually happen</span
+      >. No matter what, life will throw challenges your way, people will tell
+      you your dream is not possible. You can either let people dictate your
+      life or
+      <span class="intro__p intro__p--color">
+        you can move with intent every single day
+      </span>until you make that dream your reality.
+    </p>
+    <p class="intro__p">
+      With her amazing personality has shown thousand of people for all over the
+      world, how <span class="intro__p intro__p--color">
+        pushing ourselves
+      </span>
       beyond any limits and really prepare
-      <span class="intro__p intro__p--red">
+      <span class="intro__p intro__p--color">
         our minds for training strong all year long.
       </span>
     </p>
     <p class="intro__p">
       It's about
-      <span class="intro__p intro__p--red"> endurance, conditioning</span>
+      <span class="intro__p intro__p--color"> endurance, conditioning</span>
       and
-      <span class="intro__p intro__p--red">mental strength.</span>
+      <span class="intro__p intro__p--color">mental strength.</span>
     </p>
   </section>
-  <!--Coming Soon-->
   <!--<section class="where-to-find-us"></section>-->
 </MainLayout>
 
@@ -69,8 +75,9 @@ const image = '/hero-img/hero-img1.png';
     /* font-size: 2em; */
     /* text-align: center; */
   }
-  .intro__p--red {
+  .intro__p--color {
     color: hsl(205, 90%, 69%);
+    font-weight: 600;
   }
 
   @media (min-width: 1024px) {
