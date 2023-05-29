@@ -2,22 +2,20 @@
 // import Layouts
 import MainLayout from '../Layout/MainLayout.astro';
 import ServiceSection from '../Layout/ServiceSection.astro';
+import Main from '../Components/Main.astro';
 
 // Information about the currently page
+const MainTitle = 'Working on something great!';
 const title = 'Working on something great!';
 
-const description =
+const PageDescription =
   'A website created to showcase the amazing work that this great human beign has been done, trhough all this years. Leanna Deeb';
 
 const image = '/hero-img/hero-img1.png';
 ---
 
-<MainLayout
-  title={title}
-  MainTitle={title}
-  PageDescription={description}
-  image={image}
->
+<MainLayout title={title}>
+  <Main {MainTitle} {PageDescription} {image} />
   <!-- ===================================== -->
   <!--Aqui empieza el contenido de la pagina-->
   <!-- ===================================== -->

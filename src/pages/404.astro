@@ -1,0 +1,19 @@
+---
+// import Layouts
+import MainLayout from '../Layout/MainLayout.astro';
+import ServiceSection from '../Layout/ServiceSection.astro';
+import Main from '../Components/Main.astro';
+
+// Information about the currently page
+const MainTitle = 'OH OH!';
+const title = 'Working on something great!';
+
+const PageDescription =
+  'OH OH, It seems that there is a problem with the route';
+
+const image = '/hero-img/error-image.jpg';
+---
+
+<MainLayout title={title}>
+  <Main {MainTitle} {PageDescription} {image} />
+</MainLayout>

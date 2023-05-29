@@ -1,0 +1,21 @@
+---
+// import Layouts
+import MainLayout from '../../Layout/MainLayout.astro';
+import Main from '../../Components/Main.astro';
+
+// import components
+import Links from '../../Components/Links.astro';
+
+// Importan information about the page
+const MainTitle = 'Routines';
+
+const PageDescription =
+  'All the great routines summatized in this page. Go check them out!';
+
+const image = '/hero-img/hero-exercises.png';
+---
+
+<MainLayout title="Blog">
+  <Main {MainTitle} {PageDescription} {image} />
+  <Links text="Lower body workout" href="./post-1" style="link--2" />
+</MainLayout>

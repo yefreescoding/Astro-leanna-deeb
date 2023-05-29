@@ -1,0 +1,15 @@
+---
+import MainLayout from '../../Layout/MainLayout.astro';
+import Main from '../../Components/Main.astro';
+
+const MainTitle = 'Blog';
+
+const PageDescription =
+  'The best blog post with detailed information about the routines and diets, followed by Leanna Deeb.';
+
+const image = '/hero-img/hero-blog.png';
+---
+
+<MainLayout title="Blog">
+  <Main {MainTitle} {PageDescription} {image} />
+</MainLayout>

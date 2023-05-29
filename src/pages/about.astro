@@ -1,19 +1,17 @@
 ---
 // import Layouts
 import MainLayout from '../Layout/MainLayout.astro';
+import Main from '../Components/Main.astro';
 
-const title = 'About Her...';
+const MainTitle = 'About Her...';
 
-const description =
+const PageDescription =
   'Leanna deeb is a fitness influencer, best know for her amazing tiktok and instgram content';
 
 const image = '/hero-img/hero-about.png';
 ---
 
-<MainLayout
-  title="Train with Leanna"
-  title={title}
-  MainTitle={title}
-  PageDescription={description}
-  image={image}
-/>
+<MainLayout title="Train with Leanna">
+  <Main {MainTitle} {PageDescription} {image} />
+  <!-- content -->
+</MainLayout>

@@ -1,0 +1,31 @@
+---
+// import Global Styles Folder
+import Links from '../Components/Links.astro';
+import MainLayout from './MainLayout.astro';
+
+// important information for the Main component
+const { frontmatter } = Astro.props;
+
+const { title, description, date, category, author, image, link } = frontmatter;
+---
+
+<MainLayout title={title}>
+  <header>
+    <div class="header__text">
+      <a href="#" class="header__link"></a>
+      <h1 class="header__h1">{title}</h1>
+      <span class="header__date">{date}</span>
+    </div>
+    <img src={image.src} alt={image.alt} />
+    <Links
+      text="Link to the offical post"
+      href="https://www.instagram.com/p/CsmeS9MJQet/"
+      style="link--1"
+    />
+  </header>
+  <section class="content">
+    <slot />
+    <aside class="content__aside"></aside>
+  </section>
+  <!-- <div></div> -->
+</MainLayout>
