@@ -1,12 +1,12 @@
 ---
-layout: "../../layout/EntryLayout.astro"
+layout: '../../layout/EntryLayout.astro'
 title: LOWER BODY WORKOUT!!
 date: 2023-29-5
 author: Yefree Valdez
-image: { src: "/blog/blog-post1.png", alt: "Background picture." }
+image: { src: '/blog/blog-post1.png', alt: 'Background picture.' }
 description: Save for your next leg day 🤝
-draft: true
-category: workouts
+draft: false
+category: Workouts Docs
 ---
 
 ## LOWER BODY PAIN!!

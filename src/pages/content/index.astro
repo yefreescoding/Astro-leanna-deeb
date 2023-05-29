@@ -13,31 +13,35 @@ const PageDescription =
 const image = '/hero-img/hero-exercises.png';
 //
 
-// const allPosts = await Astro.glob('./*.md'); 
+const allPosts = await Astro.glob('./*.md');
 // Import a single file
-import * as myPost from './post-1.md';
-
+// import * as myPost from './post-1.md';
 ---
 
 <MainLayout title="Routines">
   <Main {MainTitle} {PageDescription} {image} />
   <!-- {allPosts.map((post) => <PostCard {post} />)} -->
   <section class="blog">
-    <PostCard frontmatter={myPost.frontmatter} url={myPost.frontmatter.url} />
+    {
+      allPosts.map((post) => (
+        <PostCard frontmatter={post.frontmatter} url={post.url} />
+      ))
+    }
   </section>
 </MainLayout>
 
 <style>
-  .blog{
+  .blog {
     display: grid;
     grid-template-columns: 1fr;
-    width: min(100%, 60em);
+    width: min(100%, 80em);
     margin-inline: auto;
   }
 
   @media (min-width: 40em) {
     .blog {
       grid-template-columns: repeat(3, 1fr);
+      column-gap: 1rem;
     }
   }
 </style>

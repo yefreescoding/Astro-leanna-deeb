@@ -1,58 +1,54 @@
 ---
-import Links from "./Links.astro";
+import Links from './Links.astro';
 
 const { frontmatter, url } = Astro.props;
 
-const { title, description, date, category, author, image, link } =
-  frontmatter;
+const { title, description, date, category, author, image, link } = frontmatter;
 ---
 
 <article class="card">
   <h2 class="card__h2">
     {title}
   </h2>
-  <img class="card__image" src={image.src} alt={image.alt}>
+  <img class="card__image" src={image.src} alt={image.alt} />
   <div class="card__text">
     <span class="card__date">{date}</span>
     <p class="card__p">{description}</p>
-    <Links text="Train with me!" href='./post-1/' style="link--1" />
+    <Links text="Train with me!" href={url} style="link--1" />
   </div>
 </article>
 
 <style>
   .card,
-  .card__text{
+  .card__text {
     display: flex;
     flex-flow: column;
-    row-gap: .5rem;
+    row-gap: 0.5rem;
   }
 
-  .card{
-    
+  .card {
     background-color: transparent;
     box-shadow: 0 0 1.8rem hsl(0, 0%, 80%);
     transition: all 0.24s linear;
     border-radius: 1rem;
     overflow: hidden;
   }
-  .card__h2{
+  .card__h2 {
     text-align: center;
   }
-  .card__image{
+  .card__image {
     aspect-ratio: 1;
   }
-  .card__text{
-    padding: .7rem;
+  .card__text {
+    padding: 0.7rem;
     /* color: white; */
   }
-  .card__date{
-
+  .card__date {
   }
-  .card__p{
+  .card__p {
   }
 
   .workouts__containers:hover {
     transform: scale(1.05, 1.05);
   }
-
 </style>
