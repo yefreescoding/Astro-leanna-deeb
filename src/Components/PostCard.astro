@@ -1,0 +1,12 @@
+---
+const { post } = Astro.props;
+
+const { title, description, date, category, author, image, link } =
+  post.frontmatter;
+---
+
+<article class="card">
+  <h2>
+    {title}
+  </h2>
+</article>

@@ -1,5 +1,6 @@
 ---
 // import Layouts
+import PostCard from '../../Components/PostCard.astro';
 import MainLayout from '../../Layout/MainLayout.astro';
 import Main from '../../Components/Main.astro';
 
@@ -13,9 +14,12 @@ const PageDescription =
   'All the great routines summatized in this page. Go check them out!';
 
 const image = '/hero-img/hero-exercises.png';
+//
+
+const allPosts = await Astro.glob('./*.md');
 ---
 
 <MainLayout title="Blog">
   <Main {MainTitle} {PageDescription} {image} />
-  <Links text="Lower body workout" href="./post-1" style="link--2" />
+  {allPosts.map((post) => <PostCard {post} />)}
 </MainLayout>
