@@ -1,12 +1,58 @@
 ---
-const { post } = Astro.props;
+import Links from "./Links.astro";
+
+const { frontmatter, url } = Astro.props;
 
 const { title, description, date, category, author, image, link } =
-  post.frontmatter;
+  frontmatter;
 ---
 
 <article class="card">
-  <h2>
+  <h2 class="card__h2">
     {title}
   </h2>
+  <img class="card__image" src={image.src} alt={image.alt}>
+  <div class="card__text">
+    <span class="card__date">{date}</span>
+    <p class="card__p">{description}</p>
+    <Links text="Train with me!" href='./post-1/' style="link--1" />
+  </div>
 </article>
+
+<style>
+  .card,
+  .card__text{
+    display: flex;
+    flex-flow: column;
+    row-gap: .5rem;
+  }
+
+  .card{
+    
+    background-color: transparent;
+    box-shadow: 0 0 1.8rem hsl(0, 0%, 80%);
+    transition: all 0.24s linear;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .card__h2{
+    text-align: center;
+  }
+  .card__image{
+    aspect-ratio: 1;
+  }
+  .card__text{
+    padding: .7rem;
+    /* color: white; */
+  }
+  .card__date{
+
+  }
+  .card__p{
+  }
+
+  .workouts__containers:hover {
+    transform: scale(1.05, 1.05);
+  }
+
+</style>
