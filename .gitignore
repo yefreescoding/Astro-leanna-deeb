@@ -20,6 +20,4 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# testing
-src/pages/sections/post-1.md
 
