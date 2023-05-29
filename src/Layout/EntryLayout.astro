@@ -18,11 +18,7 @@ const { title, description, date, category, image, link } = frontmatter;
       <p>{description}</p>
     </div>
     <img src={image.src} alt={image.alt} />
-    <Links
-      text="Link to the offical post"
-      href='google.com'
-      style="link--1"
-    />
+    <Links text="Link to the offical post" href={link} style="link--1" />
   </header>
   <section class="content">
     <slot />

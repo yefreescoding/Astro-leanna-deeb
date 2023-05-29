@@ -9,7 +9,7 @@ const navData = [
   },
   {
     name: 'Routines',
-    link: '/sections/',
+    link: '/content/',
   },
 ];
 

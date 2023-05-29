@@ -1,5 +1,5 @@
 ---
-layout: '../../layout/EntryLayout.astro'
+layout: '../../Layout/EntryLayout.astro'
 title: LOWER BODY WORKOUT!!
 date: 2023-29-5
 author: Yefree Valdez
