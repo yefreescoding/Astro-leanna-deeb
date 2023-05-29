@@ -34,14 +34,12 @@ const allPosts = await Astro.glob('./*.md');
   .blog {
     display: grid;
     grid-template-columns: 1fr;
-    width: min(100%, 80em);
-    margin-inline: auto;
+    gap: 1rem;
   }
 
   @media (min-width: 40em) {
     .blog {
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr));
     }
   }
 </style>

@@ -1,75 +1,87 @@
 ---
+import Nav from '../Components/Nav.astro';
+
+import links from '../Data/footerLinks';
 ---
 
 <!--The last part of the page. Buff!-->
-<footer class="greetings-links">
-    <!--The footer container is divided in 2 parts-->
-    <!-- 1 PART -->
-    <div class="email-links-container">
-        <!--The email form subscription-->
-        <div class="email-form">
-            <div class="email-form__text">
-                <span>Hey there</span>
-                <h2>
-                    Let's talk <span class="h2__sports">Sport</span>
-                </h2>
-                <span>Subscribe to our newsletter.</span>
-                <span class="material-symbols-outlined">mail</span>
-            </div>
-            <form name="email-form__newsletter" action="#" method="get">
-                <input class="email" type="email" name="email-news" />
-                <input class="button" type="submit" value="subscribe" />
-            </form>
-        </div>
-        <!--The important information about the company or the creator of the web page-->
-        <div class="links-contacts">
-            <div class="links-contacts__container">
-                <span class="__header">Address</span>
-                <ul>
-                    <li>Calle de la Gitana</li>
-                    <li>Madrid</li>
-                    <li>Spain</li>
-                </ul>
-                <a href="">Localization Maps</a>
-            </div>
-            <!--Information blocks-->
-            <div class="links-contacts__container">
-                <span class="__header">Address</span>
-                <ul>
-                    <li>Calle de la Gitana</li>
-                    <li>Madrid</li>
-                    <li>Spain</li>
-                </ul>
-                <a href="">Localization Maps</a>
-            </div>
-            <!--Information blocks-->
-            <div class="links-contacts__container">
-                <span class="__header">Address</span>
-                <ul>
-                    <li>Calle de la Gitana</li>
-                    <li>Madrid</li>
-                    <li>Spain</li>
-                </ul>
-                <a href="">Localization Maps</a>
-            </div>
-            <!--Information blocks-->
-            <div class="links-contacts__container">
-                <span class="__header">Address</span>
-                <ul>
-                    <li>Calle de la Gitana</li>
-                    <li>Madrid</li>
-                    <li>Spain</li>
-                </ul>
-                <a href="">Localization Maps</a>
-            </div>
-        </div>
+<footer class="footer">
+  <div class="footer__division">
+    <a class="footer__home" href="/">LD</a>
+    <div class="footer__socials">
+      <p class="footer__P">Follow her on Social Media</p>
+      <img class="footer__image" src="/logos/instagram.png/" alt="" />
+      <img class="footer__image" src="/logos/twitter.png/" alt="" />
     </div>
-    <!--The 2 PART -->
-    <div class="copyright">
-        <p>2023. Every right reserved to the creator of the web page.</p>
-        <div>
-            <a href="">links to the source code |</a>
-            <a href="">Cool video</a>
+  </div>
+  <div class="footer__division">
+    {
+      links.map((link) => (
+        <div class="footer__nav">
+          <h4 class="footer__h4">{link.h4}</h4>
+          <ul class="footer__ul">
+            <li class="footer__li">
+              <a href="#">{link.name}</a>
+            </li>
+            <li class="footer__li">
+              <a href="#">{link.name2}</a>
+            </li>
+            <li class="footer__li">
+              <a href="#">{link.name3}</a>
+            </li>
+          </ul>
         </div>
-    </div>
+      ))
+    }
+  </div>
+  <div id="copyright" class="footer__division">
+    <small class="footer__p">
+      <span id="copyright">2023</span>. Every right reserved to the creator of
+      the web page.
+    </small>
+  </div>
 </footer>
+<!--The 2 PART -->
+
+<style>
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .footer__division,
+  .footer__socials,
+  .footer__nav {
+    display: flex;
+    padding: 3rem;
+  }
+  .footer__division,
+  .footer__socials {
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .footer__division {
+    border-bottom: 0.5px solid hsl(0, 0%, 70%);
+  }
+
+  .footer__home {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Dosis', sans-serif;
+    font-style: italic;
+    cursor: pointer;
+    color: hsl(0, 0, 20%);
+  }
+  .footer__image {
+    width: 2rem;
+    aspect-ratio: 1;
+  }
+  .footer__nav {
+    flex-direction: column;
+  }
+
+  .footer__p {
+  }
+</style>

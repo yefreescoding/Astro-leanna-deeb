@@ -25,44 +25,38 @@ const { MainTitle, PageDescription, image } = Astro.props;
 </main>
 
 <style>
-  .cover {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 2em;
-    margin: 3rem 0;
-    overflow: hidden;
-    padding: 1rem;
-  }
-
-  .cover__text {
-    display: flex;
-    flex-flow: column;
-    text-align: center;
-    row-gap: 2em;
-  }
-
-  .cover__h1 {
-  }
-
-  .cover__p {
-    color: hsl(0, 0, 60%);
-  }
-
+  .cover,
+  .cover__text,
   .cover__links {
     display: flex;
     justify-content: center;
+  }
+  .cover,
+  .cover__text {
+    flex-direction: column;
+    row-gap: 1em;
+  }
+  .cover {
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .cover__p {
+    color: hsl(0, 0, 30%);
+  }
+
+  .cover__links {
     gap: 0.8em;
     flex-wrap: wrap;
   }
   .cover__image {
     object-fit: cover;
     object-position: center;
-    width: min(80%, 100%);
-    /* aspect-ratio: 16/9; */
+    width: min(50em, 100%);
     aspect-ratio: 3/2;
-    border-radius: 1rem;
-    box-shadow: 0 0 2rem grey;
+    border-radius: 3rem;
+    box-shadow: 0 0 2rem hsl(0, 0%, 70%, 0.7);
   }
 </style>

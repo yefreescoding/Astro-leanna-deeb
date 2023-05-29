@@ -25,29 +25,20 @@ const { title, description, date, category, author, image, link } = frontmatter;
     flex-flow: column;
     row-gap: 0.5rem;
   }
-
   .card {
-    background-color: transparent;
-    box-shadow: 0 0 1.8rem hsl(0, 0%, 80%);
+    background-color: hsl(0, 0%, 95%);
     transition: all 0.24s linear;
-    border-radius: 1rem;
+    border-radius: 3rem;
     overflow: hidden;
-  }
-  .card__h2 {
-    text-align: center;
+    padding: 1.5rem;
   }
   .card__image {
     aspect-ratio: 1;
   }
-  .card__text {
-    padding: 0.7rem;
-    /* color: white; */
-  }
   .card__date {
+    font-weight: 600;
+    color: hsl(0, 0%, 60%);
   }
-  .card__p {
-  }
-
   .workouts__containers:hover {
     transform: scale(1.05, 1.05);
   }
