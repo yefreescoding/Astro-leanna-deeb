@@ -12,7 +12,7 @@ import Head from '../Components/Head.astro';
 import Main from '../Components/Main.astro';
 
 // important information for the Main component
-const { title, MainTitle, PageDescription } = Astro.props;
+const { title, MainTitle, PageDescription, image } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -20,12 +20,12 @@ const { title, MainTitle, PageDescription } = Astro.props;
   <>
     <Head {title} />
     <MainHeader />
-    <Main {MainTitle} {PageDescription} />
     <body>
       <div class="wrapper">
+        <Main {MainTitle} {PageDescription} {image} />
         <slot />
-        <MainFooter />
       </div>
+      <MainFooter />
     </body>
   </>
 </html>

@@ -4,78 +4,84 @@ import '../styles/global.css';
 
 // import Layouts
 import MainLayout from '../Layout/MainLayout.astro';
+import ServiceSection from '../Layout/ServiceSection.astro';
 
+// Information about the currently page
 const title = 'Working on something great!';
 
 const description =
-  'Have you ever had a burning desire to make a vision come to life? You want it so bad that you move with so much self belief that one day it will actually happen. No matter what, life will throw challenges your way, people will tell you your dream is not possible. You can either let people dictate your life or you can move with intent every single day until you make that dream your reality.';
+  'A website created to showcase the amazing work that this great human beign has been done, trhough all this years. Leanna Deeb';
+
+const image = '/hero-img/hero-img1.png';
 ---
 
-<MainLayout title={title} MainTitle={title} PageDescription={description}>
+<MainLayout
+  title={title}
+  MainTitle={title}
+  PageDescription={description}
+  image={image}
+>
   <!-- ===================================== -->
   <!--Aqui empieza el contenido de la pagina-->
   <!-- ===================================== -->
-  <main class="contenedor-padre-main">
-    <article class="intro">
-      <h2 class="intro__title">What is this all about?</h2>
-      <p class="intro__parag">
-        I created this <span class="red-text"> Superset challenge</span>
-        in order for us all to start the year <span class="red-text"
-          >pushing ourselves</span
-        > beyond any limits and really prepare
-        <span class="red-text"
-          >our minds for training strong all year long.</span
-        >
-      </p>
-      <p class="intro__parag">
-        It's about <span class="red-text">endurance, conditioning</span>
-        and
-        <span class="red-text">mental strength.</span>
-      </p>
-    </article>
-    <!--This is the section where the workouts are displayed-->
-    <section class="workouts full-body">
-      <!--Workouts containers-->
-      <a href="pages/FullBody.html" target="_blank">
-        <div class="workouts__containers">
-          <span class="workouts__level">Beginner</span>
-          <div class="workouts__info">
-            <h3>Full body</h3>
-            <p class="workouts__p">
-              A full body workout to start getting this new healthy habit. A
-              complete workout for beginners.
-            </p>
-          </div>
-        </div>
-      </a>
-      <!--Workouts containers-->
-      <a href="pages/GlutesWO.html" target="_blank">
-        <div class="workouts__containers lower-body">
-          <span class="workouts__level">intermediate</span>
-          <div class="workouts__info">
-            <h3>Lower body</h3>
-            <p class="workouts__p">
-              Workout from the new set of challenges. Focusing on your lower
-              body: core, gluteus,and legs.
-            </p>
-          </div>
-        </div>
-      </a>
-      <!--Workouts containers-->
-      <a href="pages/StrechtExe.html" target="_blank">
-        <div class="workouts__containers stretching">
-          <span class="workouts__level">Advance</span>
-          <div class="workouts__info">
-            <h3>Stretching</h3>
-            <p class="workouts__p">
-              An essential practice for the everyday exercise is without any
-              doubt, stretching. Do not miss it!
-            </p>
-          </div>
-        </div>
-      </a>
-    </section>
-    <!--Coming Soon-->
-    <!--<section class="where-to-find-us"></section>-->
-  </main>
+  <section class="intro">
+    <h2 class="intro__h2">What was this site made for?</h2>
+    <p class="intro__p">
+      Have you ever had a burning desire to make a vision come to life? You want
+      it so bad that you move with so much self belief that one day it will
+      actually happen. No matter what, life will throw challenges your way,
+      people will tell you your dream is not possible. You can either let people
+      dictate your life or you can move with intent every single day until you
+      make that dream your reality. , is showing the world how to become the
+      best version of yourself. With her amazin personalitie has shown thousand
+      of people for all over the world, how
+      <span class="intro__p intro__p--red">pushing ourselves</span>
+      beyond any limits and really prepare
+      <span class="intro__p intro__p--red">
+        our minds for training strong all year long.
+      </span>
+    </p>
+    <p class="intro__p">
+      It's about
+      <span class="intro__p intro__p--red"> endurance, conditioning</span>
+      and
+      <span class="intro__p intro__p--red">mental strength.</span>
+    </p>
+  </section>
+  <!--Coming Soon-->
+  <!--<section class="where-to-find-us"></section>-->
 </MainLayout>
+
+<style>
+  .intro {
+    background-color: hsla(239, 96%, 10%);
+    color: hsl(0, 0%, 95%);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: min(3vh, 5rem) 1rem;
+  }
+  .intro__h2 {
+    font-size: clamp(2rem, 1rem + 5vw, 3.2rem);
+  }
+  .intro__p {
+    /* font-size: 2em; */
+    /* text-align: center; */
+  }
+  .intro__p--red {
+    color: hsl(205, 90%, 69%);
+  }
+
+  @media (min-width: 1024px) {
+    .intro {
+      align-items: flex-start;
+      padding: 5%;
+      height: 88vh;
+    }
+    .intro__parag {
+      text-align: start;
+      font-weight: 400;
+    }
+  }
+</style>

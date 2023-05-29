@@ -38,16 +38,14 @@ const { text, href, style, classes, ...rest } = Astro.props as Props;
       rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
     color: hsl(0, 0%, 100%);
     cursor: pointer;
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 0.8rem;
     position: relative;
-    text-decoration: none;
     transition: box-shadow 0.15s, transform 0.15s;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-    will-change: box-shadow, transform;
-    /* font-size: 18px; */
+    font-size: 1rem;
   }
 
   :is(.link--2, .link--1):focus {
