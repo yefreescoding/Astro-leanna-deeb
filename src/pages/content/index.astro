@@ -3,6 +3,7 @@
 import PostCard from '../../Components/PostCard.astro';
 import MainLayout from '../../Layout/MainLayout.astro';
 import Main from '../../Components/Main.astro';
+import ServiceSection from '../../Components/ServiceSection.astro';
 
 // Importan information about the page
 const MainTitle = 'Routines';
@@ -11,35 +12,17 @@ const PageDescription =
   'All the great routines summatized in this page. Go check them out!';
 
 const image = '/hero-img/hero-exercises.png';
-//
 
 const allPosts = await Astro.glob('./*.md');
-// Import a single file
-// import * as myPost from './post-1.md';
 ---
 
 <MainLayout title="Routines">
   <Main {MainTitle} {PageDescription} {image} />
-  <!-- {allPosts.map((post) => <PostCard {post} />)} -->
-  <section class="blog">
+  <ServiceSection sectionTitle="Workouts">
     {
       allPosts.map((post) => (
         <PostCard frontmatter={post.frontmatter} url={post.url} />
       ))
     }
-  </section>
+  </ServiceSection>
 </MainLayout>
-
-<style>
-  .blog {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  @media (min-width: 40em) {
-    .blog {
-      grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr));
-    }
-  }
-</style>

@@ -1,17 +1,21 @@
 ---
+import PostCard from '../Components/PostCard.astro';
 // import Layouts
 import MainLayout from '../Layout/MainLayout.astro';
-import ServiceSection from '../Layout/ServiceSection.astro';
+import ServiceSection from '../Components/ServiceSection.astro';
 import Main from '../Components/Main.astro';
 
 // Information about the currently page
-const MainTitle = 'Working on something great!';
 const title = 'Working on something great!';
+
+const MainTitle = 'Working on something great!';
 
 const PageDescription =
   'A website created to showcase the amazing work that this great human beign has been done, trhough all this years. Leanna Deeb';
 
 const image = '/hero-img/hero-img1.png';
+
+const allPosts = await Astro.glob('./content/star-posts/*.md');
 ---
 
 <MainLayout title={title}>
@@ -47,7 +51,22 @@ const image = '/hero-img/hero-img1.png';
       </span>
     </p> -->
   </section>
-  <!-- <ServiceSection /> -->
+  <ServiceSection sectionTitle="All the content right here... workouts">
+    <!-- Content -->
+    {
+      allPosts.map((post) => (
+        <PostCard frontmatter={post.frontmatter} url={post.url} />
+      ))
+    }
+  </ServiceSection>
+  <ServiceSection sectionTitle="Blog Posts">
+    <!-- Content -->
+    {
+      allPosts.map((post) => (
+        <PostCard frontmatter={post.frontmatter} url={post.url} />
+      ))
+    }
+  </ServiceSection>
 </MainLayout>
 
 <style>

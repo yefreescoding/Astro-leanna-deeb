@@ -1,0 +1,32 @@
+---
+import services from '../Data/servicesData';
+
+const { sectionTitle } = Astro.props;
+---
+
+<!--This is the section where the workouts are displayed-->
+<section class="workouts full-body">
+  <!--Workouts containers-->
+  <section class="section">
+    <h2 class="section__h2">{sectionTitle}</h2>
+    <div class="blog">
+      <slot />
+    </div>
+  </section>
+</section>
+
+<style>
+  .section {
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+  }
+  .section__h2 {
+    color: white;
+  }
+  .blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr));
+    gap: 1rem;
+  }
+</style>
