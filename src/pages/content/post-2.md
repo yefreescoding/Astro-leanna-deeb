@@ -1,10 +1,10 @@
 ---
 layout: '../../Layout/EntryLayout.astro'
-title: LOWER BODY WORKOUT!!
+title: Full body workout!!
 date: 2023-29-5
 author: Yefree Valdez
-image: { src: '/blog/blog-post1.png', alt: 'Background picture.' }
-description: Save for your next leg day 🤝
+image: { src: '/blog/hero-fullbody.png', alt: 'Background picture.' }
+description: A full body workout
 draft: false
 category: Workouts Docs
 ---
@@ -13,4 +13,4 @@ category: Workouts Docs
 
 ### Workout details…:
 
-Great workout to make start the week... more coming soon.
+A full body workout for the people that want to challenge themselves.

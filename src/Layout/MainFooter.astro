@@ -9,9 +9,17 @@ import links from '../Data/footerLinks';
   <div class="footer__division">
     <a class="footer__home" href="/">LD</a>
     <div class="footer__socials">
-      <p class="footer__P">Follow her on Social Media</p>
-      <img class="footer__image" src="/logos/instagram.png/" alt="" />
-      <img class="footer__image" src="/logos/twitter.png/" alt="" />
+      <small class="footer__P">Follow her on Social Media</small>
+      <img
+        class="footer__image"
+        src="/logos/instagram.png/"
+        alt="insttgram logo icon"
+      />
+      <img
+        class="footer__image"
+        src="/logos/twitter.png/"
+        alt="instagram logo icon"
+      />
     </div>
   </div>
   <div class="footer__division">
@@ -53,7 +61,7 @@ import links from '../Data/footerLinks';
   .footer__socials,
   .footer__nav {
     display: flex;
-    padding: 3rem;
+    color: white;
   }
   .footer__division,
   .footer__socials {
@@ -61,9 +69,10 @@ import links from '../Data/footerLinks';
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
+    padding: 3rem 1rem;
   }
   .footer__division {
-    border-bottom: 0.5px solid hsl(0, 0%, 70%);
+    border-bottom: 0.5px solid hsl(0, 0%, 90%);
   }
 
   .footer__home {
@@ -72,16 +81,18 @@ import links from '../Data/footerLinks';
     font-family: 'Dosis', sans-serif;
     font-style: italic;
     cursor: pointer;
-    color: hsl(0, 0, 20%);
+    color: hsl(0, 0%, 80%);
   }
   .footer__image {
     width: 2rem;
     aspect-ratio: 1;
+    filter: invert(2);
   }
   .footer__nav {
     flex-direction: column;
   }
 
-  .footer__p {
+  .footer__li a {
+    color: hsl(0, 0%, 80%);
   }
 </style>

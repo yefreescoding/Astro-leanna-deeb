@@ -26,7 +26,7 @@ const image = '/hero-img/hero-img1.png';
         desire to make a vision come to life?
       </span>
     </p>
-    <p>
+    <p class="intro__p">
       You want it so bad that you move with so much self belief that one day <span
         class="intro__p intro__p--color">it will actually happen</span
       >. No matter what, life will throw challenges your way, people will tell
@@ -36,7 +36,7 @@ const image = '/hero-img/hero-img1.png';
         you can move with intent every single day
       </span>until you make that dream your reality.
     </p>
-    <p class="intro__p">
+    <!-- <p class="intro__p">
       With her amazing personality has shown thousand of people for all over the
       world, how <span class="intro__p intro__p--color">
         pushing ourselves
@@ -45,49 +45,31 @@ const image = '/hero-img/hero-img1.png';
       <span class="intro__p intro__p--color">
         our minds for training strong all year long.
       </span>
-    </p>
-    <p class="intro__p">
-      It's about
-      <span class="intro__p intro__p--color"> endurance, conditioning</span>
-      and
-      <span class="intro__p intro__p--color">mental strength.</span>
-    </p>
+    </p> -->
   </section>
   <!-- <ServiceSection /> -->
 </MainLayout>
 
 <style>
   .intro {
-    background-color: hsla(239, 96%, 10%);
+    background-color: hsla(239, 10%, 5%);
     color: hsl(0, 0%, 95%);
     display: flex;
     flex-flow: column;
     justify-content: center;
+    text-align: center;
     gap: 1.5rem;
-    padding: min(3vh, 5rem) 1rem;
-    border-radius: 3rem;
+    padding: 5%;
+    border-radius: 1rem;
   }
   .intro__h2 {
     font-size: clamp(2rem, 1rem + 5vw, 3.2rem);
   }
   .intro__p {
-    /* font-size: 2em; */
-    /* text-align: center; */
+    font-size: clamp(1.3rem, 1rem + 4vw, 1.9rem);
   }
   .intro__p--color {
     color: hsl(205, 90%, 69%);
     font-weight: 600;
-  }
-
-  @media (min-width: 1024px) {
-    .intro {
-      align-items: flex-start;
-      padding: 5%;
-      height: 88vh;
-    }
-    .intro__parag {
-      text-align: start;
-      font-weight: 400;
-    }
   }
 </style>

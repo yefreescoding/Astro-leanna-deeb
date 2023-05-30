@@ -14,7 +14,7 @@ const { title, description, date, category, author, image, link } = frontmatter;
   <div class="card__text">
     <span class="card__date">{date}</span>
     <p class="card__p">{description}</p>
-    <Links text="Train with me!" href={url} style="link--1" />
+    <Links text="Train with me!" href={url} style="link--2" />
   </div>
 </article>
 
@@ -28,12 +28,13 @@ const { title, description, date, category, author, image, link } = frontmatter;
   .card {
     background-color: hsl(0, 0%, 95%);
     transition: all 0.24s linear;
-    border-radius: 3rem;
+    border-radius: 1rem;
     overflow: hidden;
     padding: 1.5rem;
   }
   .card__image {
     aspect-ratio: 1;
+    object-fit: cover;
   }
   .card__date {
     font-weight: 600;
